@@ -1,0 +1,6 @@
+[core]
+	editor = \"C:\\Users\\peter\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" --wait
+	autocrlf = input
+[user]
+	email = pjm349@drexel.edu
+	name = Peter 201943 Mangelsdorf

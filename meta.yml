@@ -1,0 +1,6 @@
+type: Handler
+program:
+  type: ProgramReference
+  name: conf-man
+  location: https://github.com/peter201943/conf-man
+  updated: 2022-03-13

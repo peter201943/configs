@@ -1,0 +1,4 @@
+type: Paths
+destinations:
+  type: Destination
+  path: "C:/Users/peter"

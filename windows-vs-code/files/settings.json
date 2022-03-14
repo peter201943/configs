@@ -1,0 +1,406 @@
+// title:   Peter's VS Code Config File
+// url:     https://github.com/peter201943/dotfiles/vscode/settings.json
+// updated: 2020-10-26T09:46:00
+// settings:
+{
+
+
+
+
+    // languages:
+
+
+
+      // yaml:
+        // 2021-03-04
+        // Stop annyoing auto-complete in yaml
+        // Disable tooltip hint in Visual Studio Code
+        // https://stackoverflow.com/questions/41115285/disable-tooltip-hint-in-visual-studio-code
+        "yaml.completion": false,
+
+
+      // python:
+
+        // 2019-00-00
+        // Use the SciPy suite, not default Python
+        // 2021-01-29
+        // I am not using Anaconda on this machine
+        // I will manage python manually
+        // "python.pythonPath": "C:\\anaconda",
+        
+        // 2019-00-00
+        // Stop annoying suggestions/crashes
+        "python.jediEnabled": false,
+        
+        // 2020-10-26
+        // ???
+        "python.languageServer": "Pylance",
+
+        // 2021-01-29
+        // Enable Python Linting by Default
+        "python.linting.enabled": true,
+        
+        // 2021-01-29
+        // Do not automatically send code to Jupyter
+        "jupyter.sendSelectionToInteractiveWindow": false,
+
+
+      // haskell:
+
+        // 2020-00-00
+        // Trying to enable linting for Haskell
+        // 2021-01-29
+        // Not using Haskell
+        // "haskell.hlint.executablePath": "C:\\Program Files\\hlint\\hlint.exe",
+
+
+      // java:
+        
+        // 2019-00-00
+        // Allow in Editor Compiling
+        // 2021-01-29
+        // Not using Java right now
+        // "java.home": "C:\\Program Files\\Java\\jdk-11.0.4",
+        
+        // 2019-00-00
+        // ???
+        // 2021-01-29
+        // Not using Java
+        // "java.help.firstView": "gettingStarted",
+        
+        // 2020-00-00
+        // ???
+        // 2021-01-29
+        // Not using Java
+        // "java.configuration.checkProjectSettingsExclusions": false,
+        
+        // 2020-00-00
+        // Allow complex builds
+        // 2021-01-29
+        // Not using Java
+        // "maven.executable.path": "C:\\Program Files\\Maven\\apache-maven-3.6.3\\bin\\mvn",
+        
+        // 2020-05-10
+        // This is driving me insane. It's showing up when it _shouldn't_. Grrr....
+        // 2021-01-29
+        // Not using Java
+        // "java.semanticHighlighting.enabled": false,
+
+
+      // fsharp:
+        
+        // 2020-05-05
+        // ???
+        // 2021-01-29
+        // Not using F#
+        // "FSharp.useSdkScripts": true,
+        
+        // 2020-05-05
+        // Stop putting `.ionide` folders everywhere!
+        // 2021-01-29
+        // Not using Java
+        // "FSharp.suggestGitignore": false,
+
+
+      // latex:
+
+        // 2021-05-01
+        // Turn Off Autocompile on Save
+        // https://stackoverflow.com/questions/46428144/vscode-stop-autocompilation-latex-toolchain/48186562
+        // onFileChange -> never
+        "latex-workshop.latex.autoBuild.run": "never",
+    
+
+
+
+    // tabsizes:
+
+      // 2020-10-26
+      // https://stackoverflow.com/questions/29972396/how-can-i-customize-the-tab-to-space-conversion-factor
+      // The number of spaces a tab is equal to. This setting is overridden based on the file contents when `editor.detectIndentation` is true.
+      "editor.tabSize": 2,
+      
+      // 2019-00-00
+      // Insert spaces when pressing Tab. This setting is overriden based on the file contents when `editor.detectIndentation` is true.
+      "editor.insertSpaces": true,
+
+
+
+
+    // popups:
+
+
+      // suggestions:
+
+        // 2019-00-00
+        // https://github.com/Microsoft/vscode/issues/14840
+        // Don't clutter up `MyFunc(param1: int...)`
+        "editor.parameterHints.enabled": false,
+        
+        // 2019-00-00
+        // Stop quick suggestions while typing
+        // "editor.quickSuggestions": false,
+        // 2021-03-04
+        // VS Code Changed this option
+        "editor.quickSuggestions": {
+          "other":    false,
+          "comments": false,
+          "strings":  false
+        },
+        
+        // 2019-00-00
+        // Stop showing things because of `: ; ( ...`
+        "editor.suggestOnTriggerCharacters": false,
+        
+        // 2019-00-00
+        // Prefer first found item over others
+        "editor.suggestSelection": "first",
+        
+        // 2019-00-00
+        // ???
+        "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+        
+        // 2020-00-00
+        // Turn off super annoying GitBlame.
+        // 2021-04-20: false -> true // Let me see SQL "Run on active connection"
+        // 2021-05-01: true -> false // stop annoying autoscrolling in markdown
+        "editor.codeLens": false,
+
+        // 2021-03-04
+        // STOP DOING STUFF!!!! GRRRRRR
+        // Prevent autocomplete in Visual Studio Code
+        // https://stackoverflow.com/questions/32911977/prevent-autocomplete-in-visual-studio-code
+        "editor.acceptSuggestionOnCommitCharacter": false,
+
+        // 2021-03-04
+        // Stop accepting suggestions with "Enter" or "Tab".
+        "editor.acceptSuggestionOnEnter": "off",
+
+        // 2021-03-04
+        // Disable  word based suggestions
+        "editor.wordBasedSuggestions": false,
+        
+        // 2020-05-11
+        // NOTE: This stops EVERYTHING. Only activate when VSCode is being REALLY stupid.
+        // "editor.parameterHints": false,
+        // 2021-03-04
+        // VS Code Removed this option
+
+        // 2022-02-12
+        // Stop Git Autofetching
+        // (Keeps asking for password - despite entering password - every five minutes)
+        "git.autofetch": false,
+
+
+      // confirmations:
+        
+        // 2020-00
+        // Stop asking me if I want to delete a file
+        "explorer.confirmDelete": false,
+        
+        // 2020-00-00
+        // Stop asking me for every last little file operation!
+        "explorer.confirmDragAndDrop": false,
+
+      // 0000-00-00
+      // ???
+      // 2022-02-12 Commented out (not in use)
+      // "terminal.integrated.rendererType": "dom",
+
+      // 0000-00-00
+      // Don't render every last tab, newline, etc.
+      "editor.renderWhitespace":        "none",
+      "editor.renderControlCharacters": false,
+    
+      // 2021-01-29
+      // Hide Menus and most features by default
+      "window.menuBarVisibility": "toggle",
+      "editor.minimap.enabled": false,
+
+      // 2021-01-15
+      // 2021-02-06
+      // Do not open start screen by default
+      "workbench.startupEditor": "none",
+
+
+
+
+    // explorer:
+
+      // 2019-00-00
+      // Stop hiding files!
+      "files.exclude": {
+          "**/.DS_Store": false,
+          "**/.git":      false,
+          "**/.hg":       false,
+          "**/.svn":      false,
+          "**/CVS":       false
+      },
+    
+
+
+
+    // terminal:
+
+
+      // default:
+
+        // 2020-00-00
+        // This allows most compilers to work properly
+        "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+
+
+      // cygwin64:
+
+        // 2020-00-00
+        // Allows me to use Cygwin/other shells and tools
+        // 2021-01-29
+        // Cygwin not installed on this system
+        // Not using Shell launched
+        // "shellLauncher.shells.windows": [
+        //     {
+        //       "shell": "C:\\cygwin64\\Cygwin.bat",
+        //       "label": "cygwin64"
+        //     },
+        //     {
+        //         "shell": "C:\\WINDOWS\\System32\\cmd.exe",
+        //         "label": "cmd"
+        //     }
+        //   ],
+    
+    
+
+
+    // font/text:
+
+
+      // families:
+      
+        // 2020-00-00
+        // Makes everything pretty.
+        // 2021-02-13
+        // Disabled because I like seeing individual characters
+        // "editor.fontLigatures": true,
+        
+        // 2020-00-00
+        // FiraCode is supposed to be default?
+        // 2021-01-29
+        // Did not install FiraCode on this machine
+        // "editor.fontFamily": "'Fira Code iScript', Consolas, 'Courier New', monospace",
+        // Instead Use Cascadia Code
+        "editor.fontFamily": "Cascadia Code",
+
+        // Default Font?
+        "editor.fontSize": 14,
+      
+
+      // special behaviors:
+
+
+        // 2021-02-05
+        // Color Match open brackets
+        // (Don't just highlight)
+        // https://stackoverflow.com/questions/39188214/custom-brace-highlighting-in-visual-studio-code
+        "workbench.colorCustomizations" : {
+          "editorBracketMatch.background": "#222266",
+          "editorBracketMatch.border": "#666666"
+        },
+
+        // 2020-05-11
+        // 2021-02-05
+        // https://stackoverflow.com/questions/41320848/how-do-i-get-visual-studio-code-to-display-italic-fonts-in-formatted-code
+        // These occasionally for whatever reason DO NOT WORK. Why?
+        "editor.tokenColorCustomizations": {
+          "textMateRules": [
+            // Comments
+            {
+              "scope": [
+                "comment",                  // This text
+                "entity.name.type.class",   // "class MyClass()"
+                "keyword",                  // "import", "export", "return"
+                "constant",                 // type == str, type == int, type == bool
+                "storage.modifier",         // "static"
+                "storage.type.class.js",    // class keyword
+              ],
+              "settings": {
+                "fontStyle": "italic"
+              }
+            },
+
+            // Operators
+            // Make these stand out just enough
+            {
+              "scope": [
+                "keyword.operator"
+              ],
+              "settings": {
+                "fontStyle": "bold",
+                "foreground": "#0099ff"
+              }
+            },
+
+            // Errors
+            // I want to draw attention to these, so we make them Bold Italic Red
+            {
+              "scope": [
+                "invalid"
+              ],
+              "settings": {
+                "fontStyle": "italic bold",
+                "foreground": "#ff0000"
+              }
+            },
+
+            // Others
+            // Don't do anything fancy to them
+            // (VSCode has some defaults for italics)
+            {
+              "scope": [
+                "constant.numeric.css",
+                "keyword.other.unit.px.css",
+                "constant.numeric.decimal.js",
+                "constant.numeric.json"
+              ],
+              "settings": {
+                "fontStyle": ""
+              }
+            }
+          ]
+        },
+        "workbench.editorAssociations": {
+          "*.ipynb": "jupyter-notebook"
+        },
+        "breadcrumbs.enabled": false,
+        "notebook.cellToolbarLocation": {
+          "default": "right",
+          "jupyter-notebook": "left"
+        },
+        "workbench.editor.untitled.hint": "hidden",
+        "workbench.activityBar.visible": false,
+        "redhat.telemetry.enabled": true,
+        "workbench.statusBar.visible": false,
+
+
+
+
+    // spelling:
+
+      // 2020-00-00
+      // common words:
+      // 2021-01-29
+      // cSpell not installed on this machine
+      // "cSpell.userWords": [
+      //   "drexel",
+      //   "dwsl",
+      //   "gameplay",
+      //   "haskell",
+      //   "kotlin",
+      //   "mangelsdorf",
+      //   "npc",
+      //   "shader",
+      //   "videogame",
+      //   "Manglesdorf"
+      // ],
+
+
+}
